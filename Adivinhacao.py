@@ -6,7 +6,7 @@ numero_maximo = 50
 numero_aleatorio = random.randint(1, numero_maximo)
 quantidade_tentativas = 1
 
-print("Digite um número entre 1 e", numero_maximo, "\n")
+print("Digite um número entre 1 e {} \n".format(numero_maximo))
 
 chute = input("Digite o número desejado: ")
 chute_convertido = int(chute)
@@ -22,4 +22,4 @@ while chute_convertido != numero_aleatorio:
     chute_convertido = int(chute)
     quantidade_tentativas += 1
 
-print("Parabéns, você acertou o número secreto com", quantidade_tentativas, "tentativas")
+print("Parabéns, você acertou o número secreto com {} tentativas.".format(quantidade_tentativas))
