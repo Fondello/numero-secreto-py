@@ -2,24 +2,24 @@ import random
 
 print("Bem-vindo ao jogo de adivinhação em Python!\n")
 
-numero_maximo = 50
+numero_maximo = 51
 numero_aleatorio = random.randint(1, numero_maximo)
 quantidade_tentativas = 1
 
-print("Digite um número entre 1 e {} \n".format(numero_maximo))
+print(f"Digite um número entre 1 e {numero_maximo - 1} \n")
 
 chute = input("Digite o número desejado: ")
 chute_convertido = int(chute)
 
-while chute_convertido != numero_aleatorio:
+while (chute_convertido != numero_aleatorio):
 
     if chute_convertido < numero_aleatorio:
         print("O número secreto é maior!")
-    else:
+    else :
         print("O número secreto é menor!")
 
     chute = input("Digite o número desejado: ")
     chute_convertido = int(chute)
     quantidade_tentativas += 1
-
-print("Parabéns, você acertou o número secreto com {} tentativas.".format(quantidade_tentativas))
+        
+print(f"Parabéns, você acertou o número secreto com {quantidade_tentativas} tentativas.")
